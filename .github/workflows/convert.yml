@@ -21,6 +21,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: rename files/folders
       run: |
+        cd _notebooks
         tree
         set -x
         sudo apt-get install rename
