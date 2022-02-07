@@ -24,11 +24,11 @@ jobs:
         tree
         set -x
         sudo apt-get install rename
-        find -name "/_notebooks/* *" -type d | rename 's/ /-/g'
-        find -name "/_notebooks/* *" -type f | rename 's/ /-/g'
+        find -name "/* *" -type d | rename 's/ /-/g'
+        find -name "/* *" -type f | rename 's/ /-/g'
         tree
-    - name: delete md
-      run: dir #rm /_notebooks/**/*.md
+    #- name: delete md
+    #  run: dir #rm /_notebooks/**/*.md
     - name: instal
       run: |
         pip3 install --upgrade pip
@@ -36,14 +36,14 @@ jobs:
     - name: Install nbconvert
       run: pip3 install nbconvert
     - name: convert to markdown
-      run: jupyter nbconvert --to markdown /_notebooks/**/*.ipynb
+      run: jupyter nbconvert --to markdown /**/*.ipynb
     - name: list
       run: tree
     - name: commit
       run: |
         git config --global user.email "v986963@gmail.com"
         git config --global user.name "vosaul"
-        git add /_notebooks/**/*.md
+        git add /**/*.md
         git commit -m "converted to markdown"
 #    - name: Archive production artifacts
 #      uses: actions/upload-artifact@v2
