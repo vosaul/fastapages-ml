@@ -43,7 +43,7 @@ jobs:
       run: |
         git config --global user.email "v986963@gmail.com"
         git config --global user.name "vosaul"
-        git add /**/*.md
+        git add *
         git commit -m "converted to markdown"
 #    - name: Archive production artifacts
 #      uses: actions/upload-artifact@v2
