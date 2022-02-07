@@ -85,7 +85,9 @@ ax.set_ylabel(TOP_CAP_YLABEL);
 ```
 
 
+    
 ![svg](Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_6_0.svg)
+    
 
 
 ## 4. Making the plot easier to read and more informative
@@ -110,7 +112,9 @@ ax.set_xlabel('');
 ```
 
 
+    
 ![svg](Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_8_0.svg)
+    
 
 
 ## 5. What is going on?! Volatility in cryptocurrencies
@@ -221,7 +225,9 @@ fig, ax = top10_subplot(volatility.percent_change_24h, DTITLE)
 ```
 
 
+    
 ![svg](Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_12_0.svg)
+    
 
 
 ## 7. Ok, those are... interesting. Let's check the weekly Series too.
@@ -241,7 +247,9 @@ fig, ax = top10_subplot(volatility7d.percent_change_7d, WTITLE);
 ```
 
 
+    
 ![svg](Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_14_0.svg)
+    
 
 
 ## 8. How small is small?
@@ -341,5 +349,7 @@ plt.bar(range(len(values)), values, tick_label=LABELS);
 ```
 
 
+    
 ![svg](Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_18_0.svg)
+    
 
