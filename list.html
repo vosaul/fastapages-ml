@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>Directory Tree</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>Directory Tree</h1><p>
+	<a href="/">/</a><br>
+	├── <a href="//_action_files/">_action_files</a><br>
+	│   ├── <a href="//_action_files/action_entrypoint.sh">action_entrypoint.sh</a><br>
+	│   ├── <a href="//_action_files/action.yml">action.yml</a><br>
+	│   ├── <a href="//_action_files/check_js.sh">check_js.sh</a><br>
+	│   ├── <a href="//_action_files/Dockerfile">Dockerfile</a><br>
+	│   ├── <a href="//_action_files/fastpages-jekyll.Dockerfile">fastpages-jekyll.Dockerfile</a><br>
+	│   ├── <a href="//_action_files/fastpages.tpl">fastpages.tpl</a><br>
+	│   ├── <a href="//_action_files/fast_template.py">fast_template.py</a><br>
+	│   ├── <a href="//_action_files/hide.tpl">hide.tpl</a><br>
+	│   ├── <a href="//_action_files/__init__.py">__init__.py</a><br>
+	│   ├── <a href="//_action_files/nb2post.py">nb2post.py</a><br>
+	│   ├── <a href="//_action_files/parse_netlify.py">parse_netlify.py</a><br>
+	│   ├── <a href="//_action_files/pr_comment.sh">pr_comment.sh</a><br>
+	│   ├── <a href="//_action_files/settings.ini">settings.ini</a><br>
+	│   ├── <a href="//_action_files/word2post.py">word2post.py</a><br>
+	│   ├── <a href="//_action_files/word2post.sh">word2post.sh</a><br>
+	│   └── <a href="//_action_files/word_front_matter.txt">word_front_matter.txt</a><br>
+	├── <a href="//assets/">assets</a><br>
+	│   ├── <a href="//assets/badges/">badges</a><br>
+	│   │   ├── <a href="//assets/badges/binder.svg">binder.svg</a><br>
+	│   │   ├── <a href="//assets/badges/colab.svg">colab.svg</a><br>
+	│   │   ├── <a href="//assets/badges/deepnote.svg">deepnote.svg</a><br>
+	│   │   └── <a href="//assets/badges/github.svg">github.svg</a><br>
+	│   └── <a href="//assets/js/">js</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="//assets/js/search-data.json">search-data.json</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="//assets/js/search.js">search.js</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="//assets/js/vendor/">vendor</a><br>
+	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="//assets/js/vendor/lunr.min.js">lunr.min.js</a><br>
+	├── <a href="//_config.yml">_config.yml</a><br>
+	├── <a href="//docker-compose.yml">docker-compose.yml</a><br>
+	├── <a href="//_fastpages_docs/">_fastpages_docs</a><br>
+	│   ├── <a href="//_fastpages_docs/annotate.png">annotate.png</a><br>
+	│   ├── <a href="//_fastpages_docs/_checkbox.png">_checkbox.png</a><br>
+	│   ├── <a href="//_fastpages_docs/CONTRIBUTING.md">CONTRIBUTING.md</a><br>
+	│   ├── <a href="//_fastpages_docs/DEVELOPMENT.md">DEVELOPMENT.md</a><br>
+	│   ├── <a href="//_fastpages_docs/enable_actions.png">enable_actions.png</a><br>
+	│   ├── <a href="//_fastpages_docs/fastapges-setup.gif">fastapges-setup.gif</a><br>
+	│   ├── <a href="//_fastpages_docs/highlight_dracula.png">highlight_dracula.png</a><br>
+	│   ├── <a href="//_fastpages_docs/highlight_original.png">highlight_original.png</a><br>
+	│   ├── <a href="//_fastpages_docs/_manual_setup.md">_manual_setup.md</a><br>
+	│   ├── <a href="//_fastpages_docs/NOTEBOOK_FOOTNOTES.md">NOTEBOOK_FOOTNOTES.md</a><br>
+	│   ├── <a href="//_fastpages_docs/_paginate.png">_paginate.png</a><br>
+	│   ├── <a href="//_fastpages_docs/_post_tags.png">_post_tags.png</a><br>
+	│   ├── <a href="//_fastpages_docs/README_TEMPLATE.md">README_TEMPLATE.md</a><br>
+	│   ├── <a href="//_fastpages_docs/_setup_pr_template.md">_setup_pr_template.md</a><br>
+	│   ├── <a href="//_fastpages_docs/_show_image_true.png">_show_image_true.png</a><br>
+	│   ├── <a href="//_fastpages_docs/TROUBLESHOOTING.md">TROUBLESHOOTING.md</a><br>
+	│   ├── <a href="//_fastpages_docs/UPGRADE.md">UPGRADE.md</a><br>
+	│   ├── <a href="//_fastpages_docs/_upgrade_pr.md">_upgrade_pr.md</a><br>
+	│   ├── <a href="//_fastpages_docs/upgrade_step1.png">upgrade_step1.png</a><br>
+	│   ├── <a href="//_fastpages_docs/upgrade_step2.png">upgrade_step2.png</a><br>
+	│   ├── <a href="//_fastpages_docs/upgrade_step3.png">upgrade_step3.png</a><br>
+	│   └── <a href="//_fastpages_docs/version.txt">version.txt</a><br>
+	├── <a href="//Gemfile">Gemfile</a><br>
+	├── <a href="//Gemfile.lock">Gemfile.lock</a><br>
+	├── <a href="//images/">images</a><br>
+	│   ├── <a href="//images/chart-preview.png">chart-preview.png</a><br>
+	│   ├── <a href="//images/copied_from_nb/">copied_from_nb</a><br>
+	│   │   └── <a href="//images/copied_from_nb/README.md">README.md</a><br>
+	│   ├── <a href="//images/diagram.png">diagram.png</a><br>
+	│   ├── <a href="//images/favicon.ico">favicon.ico</a><br>
+	│   └── <a href="//images/logo.png">logo.png</a><br>
+	├── <a href="//_includes/">_includes</a><br>
+	│   ├── <a href="//_includes/alert.html">alert.html</a><br>
+	│   ├── <a href="//_includes/custom-head.html">custom-head.html</a><br>
+	│   ├── <a href="//_includes/favicons.html">favicons.html</a><br>
+	│   ├── <a href="//_includes/google-analytics.html">google-analytics.html</a><br>
+	│   ├── <a href="//_includes/head.html">head.html</a><br>
+	│   ├── <a href="//_includes/image.html">image.html</a><br>
+	│   ├── <a href="//_includes/image-r">image-r</a><br>
+	│   ├── <a href="//_includes/important.html">important.html</a><br>
+	│   ├── <a href="//_includes/info.html">info.html</a><br>
+	│   ├── <a href="//_includes/notebook_binder_link.html">notebook_binder_link.html</a><br>
+	│   ├── <a href="//_includes/notebook_colab_link.html">notebook_colab_link.html</a><br>
+	│   ├── <a href="//_includes/notebook_deepnote_link.html">notebook_deepnote_link.html</a><br>
+	│   ├── <a href="//_includes/notebook_github_link.html">notebook_github_link.html</a><br>
+	│   ├── <a href="//_includes/note.html">note.html</a><br>
+	│   ├── <a href="//_includes/post_list.html">post_list.html</a><br>
+	│   ├── <a href="//_includes/post_list_image_card.html">post_list_image_card.html</a><br>
+	│   ├── <a href="//_includes/reading_time.html">reading_time.html</a><br>
+	│   ├── <a href="//_includes/screenshot">screenshot</a><br>
+	│   ├── <a href="//_includes/tip.html">tip.html</a><br>
+	│   ├── <a href="//_includes/toc.html">toc.html</a><br>
+	│   ├── <a href="//_includes/twitter.html">twitter.html</a><br>
+	│   ├── <a href="//_includes/utterances.html">utterances.html</a><br>
+	│   ├── <a href="//_includes/video.html">video.html</a><br>
+	│   ├── <a href="//_includes/warning.html">warning.html</a><br>
+	│   └── <a href="//_includes/youtube.html">youtube.html</a><br>
+	├── <a href="//index.html">index.html</a><br>
+	├── <a href="//_layouts/">_layouts</a><br>
+	│   ├── <a href="//_layouts/categories.html">categories.html</a><br>
+	│   ├── <a href="//_layouts/home.html">home.html</a><br>
+	│   ├── <a href="//_layouts/notebook.html">notebook.html</a><br>
+	│   └── <a href="//_layouts/post.html">post.html</a><br>
+	├── <a href="//LICENSE">LICENSE</a><br>
+	├── <a href="//list.html">list.html</a><br>
+	├── <a href="//Makefile">Makefile</a><br>
+	├── <a href="//_notebooks/">_notebooks</a><br>
+	│   ├── <a href="//_notebooks/AI%20for%20Medicine/">AI for Medicine</a><br>
+	│   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/">AI for Medical Diagnosis</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%201%20-%20Chest%20X-Ray%20Medical%20Diagnosis%20with%20Deep%20Learning.ipynb">Part 1 - Chest X-Ray Medical Diagnosis with Deep Learning.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%202%20-%20Brain%20Tumor%20Auto-Segmentation%20for%20Magnetic%20Resonance%20Imaging%20(MRI).ipynb">Part 2 - Brain Tumor Auto-Segmentation for Magnetic Resonance Imaging (MRI).ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%203%20-%20Evaluation%20of%20Diagnostic%20Models.ipynb">Part 3 - Evaluation of Diagnostic Models.ipynb</a><br>
+	│   │   │   └── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/">AI for Medical Prognosis</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%201%20-%20Build%20and%20Evaluate%20a%20Linear%20Risk%20model.ipynb">Part 1 - Build and Evaluate a Linear Risk model.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%202%20-%20Risk%20Models%20Using%20Tree-based%20Models.ipynb">Part 2 - Risk Models Using Tree-based Models.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%203%20-%20Survival%20Estimates%20that%20Vary%20with%20Time.ipynb">Part 3 - Survival Estimates that Vary with Time.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%204%20-%20Cox%20Proportional%20Hazards%20and%20Random%20Survival%20Forests.ipynb">Part 4 - Cox Proportional Hazards and Random Survival Forests.ipynb</a><br>
+	│   │   │   └── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/">AI for Medical Treatment</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/example-report.png">example-report.png</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/nndep-example.png">nndep-example.png</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%201%20-%20Estimating%20Treatment%20Effect%20Using%20Machine%20Learning.ipynb">Part 1 - Estimating Treatment Effect Using Machine Learning.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%202%20-%20Natural%20Language%20Entity%20Extraction.ipynb">Part 2 - Natural Language Entity Extraction.ipynb</a><br>
+	│   │   │   ├── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%203%20-%20Machine%20Learning%20Interpretation.ipynb">Part 3 - Machine Learning Interpretation.ipynb</a><br>
+	│   │   │   └── <a href="//_notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/readme.md">readme.md</a><br>
+	│   │   └── <a href="//_notebooks/AI%20for%20Medicine/readme.md">readme.md</a><br>
+	│   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/">End-to-End Time Series Forecasting with Deeplearning</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/">Part 1 - Data Preparation and Processing_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing.ipynb">Part 1 - Data Preparation and Processing.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/">Part 2 - Data Analysis and Visualization of Retail Sales_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales.ipynb">Part 2 - Data Analysis and Visualization of Retail Sales.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_files/">Part 3 - Modeling and Baseline Forecasting_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting.ipynb">Part 3 - Modeling and Baseline Forecasting.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_files/">Part 4 - Induction into Deep Learning Forecasting with LSTM_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM.ipynb">Part 4 - Induction into Deep Learning Forecasting with LSTM.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_files/">Part 5 - Beating Performances with N-BEATS_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS.ipynb">Part 5 - Beating Performances with N-BEATS.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters_files/">Part 6 - Tuning Our Model Hyperparameters_files</a><br>
+	│   │   ├── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters.ipynb">Part 6 - Tuning Our Model Hyperparameters.ipynb</a><br>
+	│   │   └── <a href="//_notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/readme.md">readme.md</a><br>
+	│   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/">Energy Demand Time Series Forecast</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%201%20-%20Data%20Preparation%20and%20Processing.ipynb">Part 1 - Data Preparation and Processing.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/">Part 2 - Data Exploration and Visualization_files</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization.ipynb">Part 2 - Data Exploration and Visualization.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model_files/">Part 3 - Naive Energy Demand Model_files</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model.ipynb">Part 3 - Naive Energy Demand Model.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/">Part 4 - Dynamic Time Series Model_files</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model.ipynb">Part 4 - Dynamic Time Series Model.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/">Part 5 - Nuances and visualization_files</a><br>
+	│   │   ├── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization.ipynb">Part 5 - Nuances and visualization.ipynb</a><br>
+	│   │   └── <a href="//_notebooks/Energy%20Demand%20Time%20Series%20Forecast/readme.md">readme.md</a><br>
+	│   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/">Exploring-the-Bitcoin-Crptocurrency-Market_files</a><br>
+	│   │   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_12_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_12_0.svg</a><br>
+	│   │   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_14_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_14_0.svg</a><br>
+	│   │   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_18_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_18_0.svg</a><br>
+	│   │   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_6_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_6_0.svg</a><br>
+	│   │   └── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_8_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_8_0.svg</a><br>
+	│   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market.ipynb">Exploring-the-Bitcoin-Crptocurrency-Market.ipynb</a><br>
+	│   ├── <a href="//_notebooks/Exploring-the-Bitcoin-Crptocurrency-Market.md">Exploring-the-Bitcoin-Crptocurrency-Market.md</a><br>
+	│   ├── <a href="//_notebooks/Exploring%20the%20Bitcoin%20Crptocurrency%20Market.py">Exploring the Bitcoin Crptocurrency Market.py</a><br>
+	│   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/">Federated Learning for COVID-19 Diagnosis</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/">Part 1 - Status and Cough_files</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough.ipynb">Part 1 - Status and Cough.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough.py">Part 1 - Status and Cough.py</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks_files/">Part 2 - Contact Networks_files</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks.ipynb">Part 2 - Contact Networks.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks.py">Part 2 - Contact Networks.py</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis_files/">Part 3 Personalized Diagnosis_files</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis.ipynb">Part 3 Personalized Diagnosis.ipynb</a><br>
+	│   │   ├── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis.py">Part 3 Personalized Diagnosis.py</a><br>
+	│   │   └── <a href="//_notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/readme.md">readme.md</a><br>
+	│   ├── <a href="//_notebooks/ghtop_images/">ghtop_images</a><br>
+	│   │   ├── <a href="//_notebooks/ghtop_images/sparknb.gif">sparknb.gif</a><br>
+	│   │   └── <a href="//_notebooks/ghtop_images/token.png">token.png</a><br>
+	│   ├── <a href="//_notebooks/LICENSE">LICENSE</a><br>
+	│   ├── <a href="//_notebooks/my_icons/">my_icons</a><br>
+	│   │   └── <a href="//_notebooks/my_icons/fastai_logo.png">fastai_logo.png</a><br>
+	│   ├── <a href="//_notebooks/README%20copy.md">README copy.md</a><br>
+	│   ├── <a href="//_notebooks/README.md">README.md</a><br>
+	│   ├── <a href="//_notebooks/Summarizing%20COVID-19%20News%20Using%20NLP%20and%20PyTorch/">Summarizing COVID-19 News Using NLP and PyTorch</a><br>
+	│   │   └── <a href="//_notebooks/Summarizing%20COVID-19%20News%20Using%20NLP%20and%20PyTorch/readme.md">readme.md</a><br>
+	│   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/">The Hottest Topics in Machine Learning_files</a><br>
+	│   │   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_11_0.png">The Hottest Topics in Machine Learning_11_0.png</a><br>
+	│   │   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_5_1.png">The Hottest Topics in Machine Learning_5_1.png</a><br>
+	│   │   └── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_9_0.png">The Hottest Topics in Machine Learning_9_0.png</a><br>
+	│   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.ipynb">The Hottest Topics in Machine Learning.ipynb</a><br>
+	│   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.md">The Hottest Topics in Machine Learning.md</a><br>
+	│   ├── <a href="//_notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.py">The Hottest Topics in Machine Learning.py</a><br>
+	│   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/">Visualizing COVID-19_files</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_11_1.png">Visualizing COVID-19_11_1.png</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_13_1.png">Visualizing COVID-19_13_1.png</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_17_2.png">Visualizing COVID-19_17_2.png</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_3_0.png">Visualizing COVID-19_3_0.png</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_5_2.png">Visualizing COVID-19_5_2.png</a><br>
+	│   │   ├── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_7_0.png">Visualizing COVID-19_7_0.png</a><br>
+	│   │   └── <a href="//_notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_9_1.png">Visualizing COVID-19_9_1.png</a><br>
+	│   ├── <a href="//_notebooks/Visualizing%20COVID-19.ipynb">Visualizing COVID-19.ipynb</a><br>
+	│   ├── <a href="//_notebooks/Visualizing%20COVID-19.md">Visualizing COVID-19.md</a><br>
+	│   └── <a href="//_notebooks/Visualizing%20COVID-19.py">Visualizing COVID-19.py</a><br>
+	├── <a href="//_pages/">_pages</a><br>
+	│   ├── <a href="//_pages/404.html">404.html</a><br>
+	│   ├── <a href="//_pages/about.md">about.md</a><br>
+	│   ├── <a href="//_pages/search.html">search.html</a><br>
+	│   └── <a href="//_pages/tags.html">tags.html</a><br>
+	├── <a href="//_plugins/">_plugins</a><br>
+	│   ├── <a href="//_plugins/footnote-detail.rb">footnote-detail.rb</a><br>
+	│   └── <a href="//_plugins/footnote.rb">footnote.rb</a><br>
+	├── <a href="//_posts/">_posts</a><br>
+	├── <a href="//_README.md">_README.md</a><br>
+	├── <a href="//README.md">README.md</a><br>
+	├── <a href="//_sass/">_sass</a><br>
+	│   └── <a href="//_sass/minima/">minima</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="//_sass/minima/custom-styles.scss">custom-styles.scss</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="//_sass/minima/custom-variables.scss">custom-variables.scss</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="//_sass/minima/fastpages-dracula-highlight.scss">fastpages-dracula-highlight.scss</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="//_sass/minima/fastpages-styles.scss">fastpages-styles.scss</a><br>
+	├── <a href="//_site/">_site</a><br>
+	│   ├── <a href="//_site/404.html">404.html</a><br>
+	│   ├── <a href="//_site/about/">about</a><br>
+	│   │   └── <a href="//_site/about/index.html">index.html</a><br>
+	│   ├── <a href="//_site/assets/">assets</a><br>
+	│   │   ├── <a href="//_site/assets/badges/">badges</a><br>
+	│   │   │   ├── <a href="//_site/assets/badges/binder.svg">binder.svg</a><br>
+	│   │   │   ├── <a href="//_site/assets/badges/colab.svg">colab.svg</a><br>
+	│   │   │   ├── <a href="//_site/assets/badges/deepnote.svg">deepnote.svg</a><br>
+	│   │   │   └── <a href="//_site/assets/badges/github.svg">github.svg</a><br>
+	│   │   ├── <a href="//_site/assets/css/">css</a><br>
+	│   │   │   ├── <a href="//_site/assets/css/style.css">style.css</a><br>
+	│   │   │   └── <a href="//_site/assets/css/style.css.map">style.css.map</a><br>
+	│   │   ├── <a href="//_site/assets/js/">js</a><br>
+	│   │   │   ├── <a href="//_site/assets/js/search-data.json">search-data.json</a><br>
+	│   │   │   ├── <a href="//_site/assets/js/search.js">search.js</a><br>
+	│   │   │   └── <a href="//_site/assets/js/vendor/">vendor</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; └── <a href="//_site/assets/js/vendor/lunr.min.js">lunr.min.js</a><br>
+	│   │   └── <a href="//_site/assets/minima-social-icons.svg">minima-social-icons.svg</a><br>
+	│   ├── <a href="//_site/categories/">categories</a><br>
+	│   │   └── <a href="//_site/categories/index.html">index.html</a><br>
+	│   ├── <a href="//_site/docker-compose.yml">docker-compose.yml</a><br>
+	│   ├── <a href="//_site/feed.xml">feed.xml</a><br>
+	│   ├── <a href="//_site/images/">images</a><br>
+	│   │   ├── <a href="//_site/images/chart-preview.png">chart-preview.png</a><br>
+	│   │   ├── <a href="//_site/images/copied_from_nb/">copied_from_nb</a><br>
+	│   │   │   └── <a href="//_site/images/copied_from_nb/README.md">README.md</a><br>
+	│   │   ├── <a href="//_site/images/diagram.png">diagram.png</a><br>
+	│   │   ├── <a href="//_site/images/favicon.ico">favicon.ico</a><br>
+	│   │   └── <a href="//_site/images/logo.png">logo.png</a><br>
+	│   ├── <a href="//_site/index.html">index.html</a><br>
+	│   ├── <a href="//_site/LICENSE">LICENSE</a><br>
+	│   ├── <a href="//_site/Makefile">Makefile</a><br>
+	│   ├── <a href="//_site/notebooks/">notebooks</a><br>
+	│   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/">AI for Medicine</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/">AI for Medical Diagnosis</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%201%20-%20Chest%20X-Ray%20Medical%20Diagnosis%20with%20Deep%20Learning.ipynb">Part 1 - Chest X-Ray Medical Diagnosis with Deep Learning.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%202%20-%20Brain%20Tumor%20Auto-Segmentation%20for%20Magnetic%20Resonance%20Imaging%20(MRI).ipynb">Part 2 - Brain Tumor Auto-Segmentation for Magnetic Resonance Imaging (MRI).ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/Part%203%20-%20Evaluation%20of%20Diagnostic%20Models.ipynb">Part 3 - Evaluation of Diagnostic Models.ipynb</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Diagnosis/readme.md">readme.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/">AI for Medical Prognosis</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%201%20-%20Build%20and%20Evaluate%20a%20Linear%20Risk%20model.ipynb">Part 1 - Build and Evaluate a Linear Risk model.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%202%20-%20Risk%20Models%20Using%20Tree-based%20Models.ipynb">Part 2 - Risk Models Using Tree-based Models.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%203%20-%20Survival%20Estimates%20that%20Vary%20with%20Time.ipynb">Part 3 - Survival Estimates that Vary with Time.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/Part%204%20-%20Cox%20Proportional%20Hazards%20and%20Random%20Survival%20Forests.ipynb">Part 4 - Cox Proportional Hazards and Random Survival Forests.ipynb</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Prognosis/readme.md">readme.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/">AI for Medical Treatment</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/example-report.png">example-report.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/nndep-example.png">nndep-example.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%201%20-%20Estimating%20Treatment%20Effect%20Using%20Machine%20Learning.ipynb">Part 1 - Estimating Treatment Effect Using Machine Learning.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%202%20-%20Natural%20Language%20Entity%20Extraction.ipynb">Part 2 - Natural Language Entity Extraction.ipynb</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/Part%203%20-%20Machine%20Learning%20Interpretation.ipynb">Part 3 - Machine Learning Interpretation.ipynb</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/AI%20for%20Medicine/AI%20for%20Medical%20Treatment/readme.md">readme.md</a><br>
+	│   │   │   └── <a href="//_site/notebooks/AI%20for%20Medicine/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/">End-to-End Time Series Forecasting with Deeplearning</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/">Part 1 - Data Preparation and Processing_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/Part%201%20-%20Data%20Preparation%20and%20Processing_35_0.png">Part 1 - Data Preparation and Processing_35_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/Part%201%20-%20Data%20Preparation%20and%20Processing_36_0.png">Part 1 - Data Preparation and Processing_36_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/Part%201%20-%20Data%20Preparation%20and%20Processing_39_0.png">Part 1 - Data Preparation and Processing_39_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/Part%201%20-%20Data%20Preparation%20and%20Processing_43_0.png">Part 1 - Data Preparation and Processing_43_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing_files/Part%201%20-%20Data%20Preparation%20and%20Processing_57_0.png">Part 1 - Data Preparation and Processing_57_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing.ipynb">Part 1 - Data Preparation and Processing.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%201%20-%20Data%20Preparation%20and%20Processing.md">Part 1 - Data Preparation and Processing.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/">Part 2 - Data Analysis and Visualization of Retail Sales_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_14_0.png">Part 2 - Data Analysis and Visualization of Retail Sales_14_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_29_1.png">Part 2 - Data Analysis and Visualization of Retail Sales_29_1.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_30_1.png">Part 2 - Data Analysis and Visualization of Retail Sales_30_1.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_37_0.png">Part 2 - Data Analysis and Visualization of Retail Sales_37_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_files/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales_37_1.png">Part 2 - Data Analysis and Visualization of Retail Sales_37_1.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales.ipynb">Part 2 - Data Analysis and Visualization of Retail Sales.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%202%20-%20Data%20Analysis%20and%20Visualization%20of%20Retail%20Sales.md">Part 2 - Data Analysis and Visualization of Retail Sales.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_files/">Part 3 - Modeling and Baseline Forecasting_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_files/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_18_0.png">Part 3 - Modeling and Baseline Forecasting_18_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_files/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_25_0.png">Part 3 - Modeling and Baseline Forecasting_25_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_files/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting_45_0.png">Part 3 - Modeling and Baseline Forecasting_45_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting.ipynb">Part 3 - Modeling and Baseline Forecasting.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%203%20-%20Modeling%20and%20Baseline%20Forecasting.md">Part 3 - Modeling and Baseline Forecasting.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_files/">Part 4 - Induction into Deep Learning Forecasting with LSTM_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_files/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_49_0.png">Part 4 - Induction into Deep Learning Forecasting with LSTM_49_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_files/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_49_1.png">Part 4 - Induction into Deep Learning Forecasting with LSTM_49_1.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_files/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM_49_2.png">Part 4 - Induction into Deep Learning Forecasting with LSTM_49_2.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM.ipynb">Part 4 - Induction into Deep Learning Forecasting with LSTM.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%204%20-%20Induction%20into%20Deep%20Learning%20Forecasting%20with%20LSTM.md">Part 4 - Induction into Deep Learning Forecasting with LSTM.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_files/">Part 5 - Beating Performances with N-BEATS_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_files/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_30_0.png">Part 5 - Beating Performances with N-BEATS_30_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_files/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_30_1.png">Part 5 - Beating Performances with N-BEATS_30_1.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_files/Part%205%20-%20Beating%20Performances%20with%20N-BEATS_30_2.png">Part 5 - Beating Performances with N-BEATS_30_2.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS.ipynb">Part 5 - Beating Performances with N-BEATS.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%205%20-%20Beating%20Performances%20with%20N-BEATS.md">Part 5 - Beating Performances with N-BEATS.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters_files/">Part 6 - Tuning Our Model Hyperparameters_files</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters_files/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters_48_0.png">Part 6 - Tuning Our Model Hyperparameters_48_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters.ipynb">Part 6 - Tuning Our Model Hyperparameters.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/Part%206%20-%20Tuning%20Our%20Model%20Hyperparameters.md">Part 6 - Tuning Our Model Hyperparameters.md</a><br>
+	│   │   │   └── <a href="//_site/notebooks/End-to-End%20Time%20Series%20Forecasting%20with%20Deeplearning/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/">Energy Demand Time Series Forecast</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%201%20-%20Data%20Preparation%20and%20Processing.ipynb">Part 1 - Data Preparation and Processing.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%201%20-%20Data%20Preparation%20and%20Processing.md">Part 1 - Data Preparation and Processing.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/">Part 2 - Data Exploration and Visualization_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_41_0.png">Part 2 - Data Exploration and Visualization_41_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_43_0.png">Part 2 - Data Exploration and Visualization_43_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_45_0.png">Part 2 - Data Exploration and Visualization_45_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_47_0.png">Part 2 - Data Exploration and Visualization_47_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_49_0.png">Part 2 - Data Exploration and Visualization_49_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_51_0.png">Part 2 - Data Exploration and Visualization_51_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization_files/Part%202%20-%20Data%20Exploration%20and%20Visualization_55_0.png">Part 2 - Data Exploration and Visualization_55_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization.ipynb">Part 2 - Data Exploration and Visualization.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%202%20-%20Data%20Exploration%20and%20Visualization.md">Part 2 - Data Exploration and Visualization.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model_files/">Part 3 - Naive Energy Demand Model_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model_files/Part%203%20-%20Naive%20Energy%20Demand%20Model_49_1.png">Part 3 - Naive Energy Demand Model_49_1.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model_files/Part%203%20-%20Naive%20Energy%20Demand%20Model_51_1.png">Part 3 - Naive Energy Demand Model_51_1.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model_files/Part%203%20-%20Naive%20Energy%20Demand%20Model_61_0.png">Part 3 - Naive Energy Demand Model_61_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model.ipynb">Part 3 - Naive Energy Demand Model.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%203%20-%20Naive%20Energy%20Demand%20Model.md">Part 3 - Naive Energy Demand Model.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/">Part 4 - Dynamic Time Series Model_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_54_0.png">Part 4 - Dynamic Time Series Model_54_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_62_0.png">Part 4 - Dynamic Time Series Model_62_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_64_0.png">Part 4 - Dynamic Time Series Model_64_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_71_1.png">Part 4 - Dynamic Time Series Model_71_1.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_77_0.png">Part 4 - Dynamic Time Series Model_77_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_86_0.png">Part 4 - Dynamic Time Series Model_86_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_88_0.png">Part 4 - Dynamic Time Series Model_88_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_92_1.png">Part 4 - Dynamic Time Series Model_92_1.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model_files/Part%204%20-%20Dynamic%20Time%20Series%20Model_98_0.png">Part 4 - Dynamic Time Series Model_98_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model.ipynb">Part 4 - Dynamic Time Series Model.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%204%20-%20Dynamic%20Time%20Series%20Model.md">Part 4 - Dynamic Time Series Model.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/">Part 5 - Nuances and visualization_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/Part%205%20-%20Nuances%20and%20visualization_109_0.png">Part 5 - Nuances and visualization_109_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/Part%205%20-%20Nuances%20and%20visualization_54_0.png">Part 5 - Nuances and visualization_54_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/Part%205%20-%20Nuances%20and%20visualization_60_0.png">Part 5 - Nuances and visualization_60_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization_files/Part%205%20-%20Nuances%20and%20visualization_93_0.png">Part 5 - Nuances and visualization_93_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization.ipynb">Part 5 - Nuances and visualization.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/Part%205%20-%20Nuances%20and%20visualization.md">Part 5 - Nuances and visualization.md</a><br>
+	│   │   │   └── <a href="//_site/notebooks/Energy%20Demand%20Time%20Series%20Forecast/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/">Exploring-the-Bitcoin-Crptocurrency-Market_files</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_12_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_12_0.svg</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_14_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_14_0.svg</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_18_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_18_0.svg</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_6_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_6_0.svg</a><br>
+	│   │   │   └── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market_files/Exploring-the-Bitcoin-Crptocurrency-Market_8_0.svg">Exploring-the-Bitcoin-Crptocurrency-Market_8_0.svg</a><br>
+	│   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market.html">Exploring-the-Bitcoin-Crptocurrency-Market.html</a><br>
+	│   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market.ipynb">Exploring-the-Bitcoin-Crptocurrency-Market.ipynb</a><br>
+	│   │   ├── <a href="//_site/notebooks/Exploring-the-Bitcoin-Crptocurrency-Market.md">Exploring-the-Bitcoin-Crptocurrency-Market.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/Exploring%20the%20Bitcoin%20Crptocurrency%20Market.py">Exploring the Bitcoin Crptocurrency Market.py</a><br>
+	│   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/">Federated Learning for COVID-19 Diagnosis</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/">Part 1 - Status and Cough_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/Part%201%20-%20Status%20and%20Cough_10_0.png">Part 1 - Status and Cough_10_0.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/Part%201%20-%20Status%20and%20Cough_6_2.png">Part 1 - Status and Cough_6_2.png</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/Part%201%20-%20Status%20and%20Cough_6_3.png">Part 1 - Status and Cough_6_3.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough_files/Part%201%20-%20Status%20and%20Cough_8_0.png">Part 1 - Status and Cough_8_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough.ipynb">Part 1 - Status and Cough.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough.md">Part 1 - Status and Cough.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%201%20-%20Status%20and%20Cough.py">Part 1 - Status and Cough.py</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks_files/">Part 2 - Contact Networks_files</a><br>
+	│   │   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks_files/Part%202%20-%20Contact%20Networks_10_0.png">Part 2 - Contact Networks_10_0.png</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks_files/Part%202%20-%20Contact%20Networks_7_0.png">Part 2 - Contact Networks_7_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks.ipynb">Part 2 - Contact Networks.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks.md">Part 2 - Contact Networks.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%202%20-%20Contact%20Networks.py">Part 2 - Contact Networks.py</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis_files/">Part 3 Personalized Diagnosis_files</a><br>
+	│   │   │   │   └── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis_files/Part%203%20Personalized%20Diagnosis_8_0.png">Part 3 Personalized Diagnosis_8_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis.ipynb">Part 3 Personalized Diagnosis.ipynb</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis.md">Part 3 Personalized Diagnosis.md</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/Part%203%20Personalized%20Diagnosis.py">Part 3 Personalized Diagnosis.py</a><br>
+	│   │   │   └── <a href="//_site/notebooks/Federated%20Learning%20for%20COVID-19%20Diagnosis/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/ghtop_images/">ghtop_images</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/ghtop_images/sparknb.gif">sparknb.gif</a><br>
+	│   │   │   └── <a href="//_site/notebooks/ghtop_images/token.png">token.png</a><br>
+	│   │   ├── <a href="//_site/notebooks/LICENSE">LICENSE</a><br>
+	│   │   ├── <a href="//_site/notebooks/my_icons/">my_icons</a><br>
+	│   │   │   └── <a href="//_site/notebooks/my_icons/fastai_logo.png">fastai_logo.png</a><br>
+	│   │   ├── <a href="//_site/notebooks/README%20copy.md">README copy.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/README.md">README.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/Summarizing%20COVID-19%20News%20Using%20NLP%20and%20PyTorch/">Summarizing COVID-19 News Using NLP and PyTorch</a><br>
+	│   │   │   └── <a href="//_site/notebooks/Summarizing%20COVID-19%20News%20Using%20NLP%20and%20PyTorch/readme.md">readme.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/">The Hottest Topics in Machine Learning_files</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_11_0.png">The Hottest Topics in Machine Learning_11_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_5_1.png">The Hottest Topics in Machine Learning_5_1.png</a><br>
+	│   │   │   └── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_9_0.png">The Hottest Topics in Machine Learning_9_0.png</a><br>
+	│   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.ipynb">The Hottest Topics in Machine Learning.ipynb</a><br>
+	│   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.md">The Hottest Topics in Machine Learning.md</a><br>
+	│   │   ├── <a href="//_site/notebooks/The%20Hottest%20Topics%20in%20Machine%20Learning.py">The Hottest Topics in Machine Learning.py</a><br>
+	│   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/">Visualizing COVID-19_files</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_11_1.png">Visualizing COVID-19_11_1.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_13_1.png">Visualizing COVID-19_13_1.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_17_2.png">Visualizing COVID-19_17_2.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_3_0.png">Visualizing COVID-19_3_0.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_5_2.png">Visualizing COVID-19_5_2.png</a><br>
+	│   │   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_7_0.png">Visualizing COVID-19_7_0.png</a><br>
+	│   │   │   └── <a href="//_site/notebooks/Visualizing%20COVID-19_files/Visualizing%20COVID-19_9_1.png">Visualizing COVID-19_9_1.png</a><br>
+	│   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19.ipynb">Visualizing COVID-19.ipynb</a><br>
+	│   │   ├── <a href="//_site/notebooks/Visualizing%20COVID-19.md">Visualizing COVID-19.md</a><br>
+	│   │   └── <a href="//_site/notebooks/Visualizing%20COVID-19.py">Visualizing COVID-19.py</a><br>
+	│   ├── <a href="//_site/README.md">README.md</a><br>
+	│   ├── <a href="//_site/robots.txt">robots.txt</a><br>
+	│   ├── <a href="//_site/search/">search</a><br>
+	│   │   └── <a href="//_site/search/index.html">index.html</a><br>
+	│   └── <a href="//_site/sitemap.xml">sitemap.xml</a><br>
+	└── <a href="//_word/">_word</a><br>
+	&nbsp;&nbsp;&nbsp; └── <a href="//_word/README.md">README.md</a><br>
+	<br><br>
+	</p>
+	<p>
+
+81 directories, 326 files
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>
