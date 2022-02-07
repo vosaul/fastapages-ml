@@ -37,9 +37,13 @@ jobs:
     - name: Install nbconvert
       run: pip3 install nbconvert
     - name: convert to markdown
-      run: jupyter nbconvert --to markdown ./**/*.ipynb
+      run: |
+        cd _notebooks
+        jupyter nbconvert --to markdown ./**/*.ipynb
     - name: list
-      run: tree
+      run: |
+        cd _notebooks
+        tree
     - name: commit
       run: |
         git config --global user.email "v986963@gmail.com"
