@@ -28,8 +28,8 @@ jobs:
         find -name "/_notebooks/* *" -type f | rename 's/ /-/g'
         tree
     - name: delete md
-      run: rm /_notebooks/**/*.md
-    - name: install 
+      run: dir #rm /_notebooks/**/*.md
+    - name: instal
       run: |
         pip3 install --upgrade pip
         pip3 install jupyter
