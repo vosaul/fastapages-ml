@@ -92,7 +92,9 @@ counts.plot(kind='bar')
 
 
 
-![png](The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_5_1.png)
+    
+![png](The-Hottest-Topics-in-Machine-Learning_files/The-Hottest-Topics-in-Machine-Learning_5_1.png)
+    
 
 
 ## 4. Preprocessing the text data
@@ -161,7 +163,9 @@ wordcloud.to_image()
 
 
 
-![png](The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_9_0.png)
+    
+![png](The-Hottest-Topics-in-Machine-Learning_files/The-Hottest-Topics-in-Machine-Learning_9_0.png)
+    
 
 
 
@@ -208,7 +212,9 @@ plot_10_most_common_words(count_data, count_vectorizer)
 ```
 
 
-![png](The%20Hottest%20Topics%20in%20Machine%20Learning_files/The%20Hottest%20Topics%20in%20Machine%20Learning_11_0.png)
+    
+![png](The-Hottest-Topics-in-Machine-Learning_files/The-Hottest-Topics-in-Machine-Learning_11_0.png)
+    
 
 
 ## 7. Analysing trends with LDA

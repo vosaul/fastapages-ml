@@ -112,7 +112,9 @@ ggplot(confirmed_cases_worldwide, aes(date, cum_cases)) +
 ```
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_3_0.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_3_0.png)
+    
 
 
 ## 3. China compared to the rest of the world
@@ -159,7 +161,9 @@ plt_cum_confirmed_cases_china_vs_world
 
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_5_2.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_5_2.png)
+    
 
 
 ## 4. Let's annotate!
@@ -185,7 +189,9 @@ plt_cum_confirmed_cases_china_vs_world +
 ```
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_7_0.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_7_0.png)
+    
 
 
 ## 5. Adding a trend line to China
@@ -211,7 +217,9 @@ ggplot(china_after_feb15, aes(date, cum_cases)) +
 
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_9_1.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_9_1.png)
+    
 
 
 ## 6. And the rest of the world?
@@ -240,7 +248,9 @@ plt_not_china_trend_lin
 
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_11_1.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_11_1.png)
+    
 
 
 ## 7. Adding a logarithmic scale
@@ -258,7 +268,9 @@ plt_not_china_trend_lin +
 
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_13_1.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_13_1.png)
+    
 
 
 ## 8. Which countries outside of China have been hit hardest?
@@ -361,5 +373,7 @@ ggplot(confirmed_cases_top7_outside_china, aes(date, cum_cases, color = country)
 
 
 
-![png](Visualizing%20COVID-19_files/Visualizing%20COVID-19_17_2.png)
+    
+![png](Visualizing-COVID-19_files/Visualizing-COVID-19_17_2.png)
+    
 
